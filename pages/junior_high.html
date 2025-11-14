@@ -1,0 +1,92 @@
+<section id="junior_high_section">
+    <h1>Junior High School</h1>
+    <div class="cards">
+        <!-- Overview Card -->
+        <div class="card jh-card">
+            <img src="https://storage.googleapis.com/school_sites/spud/images/academics/1AEC0300CD-1721781015.jpg" alt="Junior High Overview">
+            <h3>Overview</h3>
+            <p>
+                Develop critical thinking, problem-solving, and values while preparing students for senior high tracks. Grades 7-10 focus on advanced subjects, leadership, and personal growth.
+            </p>
+        </div>
+
+        <!-- Curriculum Highlights Card -->
+        <div class="card jh-card">
+            <h3>Curriculum Highlights</h3>
+            <p>• Commits to quality Catholic education with spirituality, excellence, and service as core themes.</p>
+            <p>• Integrates "Ways of Life" and 21st-century skills framework.</p>
+            <p>• Strengthens faith life and spirituality among students and faculty.</p>
+            <p>• Aims for well-rounded development addressing faith, academics, and social skills.</p>
+        </div>
+    </div>
+
+    <script>
+        const jhCards = document.querySelectorAll('#junior_high_section .card.jh-card');
+        jhCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 6px 18px rgba(0,0,0,0.1)';
+            });
+        });
+    </script>
+
+    <style>
+        /* Section */
+        #junior_high_section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #junior_high_section h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        /* Cards container */
+        #junior_high_section .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        #junior_high_section .card.jh-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #junior_high_section .card.jh-card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        #junior_high_section .card.jh-card h3 {
+            font-size: 1.4em;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        #junior_high_section .card.jh-card p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+    </style>
+</section>

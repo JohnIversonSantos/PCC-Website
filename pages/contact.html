@@ -1,0 +1,93 @@
+<section id="contact_section">
+    <h1>Contact Us</h1>
+    <div class="contact-container">
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.438486383525!2d121.08919407510163!3d14.575135989823267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9f3d35f726f%3A0xe8c0e71221842b3b!2sPasig%20Catholic%20College!5e0!3m2!1sen!2sph!4v1600000000000!5m2!1sen!2sph" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <style>
+        #contact_section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #contact_section h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* Form Styling */
+        .contact-container form {
+            flex: 1 1 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+
+        .contact-container form input,
+        .contact-container form textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            resize: none;
+        }
+
+        .contact-container form button {
+            padding: 12px;
+            background-color: #2c3e50;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-container form button:hover {
+            background-color: #34495e;
+        }
+
+        /* Map Styling */
+        .contact-container iframe {
+            flex: 1 1 400px;
+            height: 400px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 900px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-container iframe,
+            .contact-container form {
+                width: 100%;
+            }
+        }
+    </style>
+</section>

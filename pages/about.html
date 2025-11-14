@@ -1,0 +1,86 @@
+<section id="aboutus_section">
+    <h1>About Us</h1>
+    <div class="card aboutus-card">
+        <div class="card-section">
+            <h3>Mission</h3>
+            <p>Pasig Catholic College is dedicated to nurturing academic excellence, holistic development, and strong moral values in its students, preparing them to serve God and society responsibly.</p>
+        </div>
+        <div class="divider"></div>
+        <div class="card-section">
+            <h3>Vision</h3>
+            <p>To be a leading educational institution recognized for quality formation, innovative teaching, and a community of learners committed to lifelong growth and service.</p>
+        </div>
+        <div class="divider"></div>
+        <div class="card-section">
+            <h3>Core Values</h3>
+            <p>Faith, Integrity, Excellence, Discipline, and Service guide the character formation and academic journey of every PCC student, fostering responsible and ethical citizens.</p>
+        </div>
+        <div class="divider"></div>
+        <div class="card-section">
+            <h3>History</h3>
+            <p>Founded in 1948, Pasig Catholic College has continuously grown to provide quality education through various academic programs and holistic formation, impacting generations of students in Pasig City and beyond.</p>
+        </div>
+    </div>
+
+    <script>
+        const aboutCard = document.querySelector('.aboutus-card');
+        aboutCard.addEventListener('mouseenter', () => {
+            aboutCard.style.transform = 'translateY(-5px)';
+            aboutCard.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
+        });
+        aboutCard.addEventListener('mouseleave', () => {
+            aboutCard.style.transform = 'translateY(0)';
+            aboutCard.style.boxShadow = '0 6px 18px rgba(0,0,0,0.1)';
+        });
+    </script>
+
+    <style>
+        #aboutus_section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #aboutus_section h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        /* Main card container */
+        .aboutus-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            max-width: 1000px; /* Increased width */
+            margin: 0 auto;
+            padding: 30px; /* More padding for the wider layout */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-section {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .card-section h3 {
+            font-size: 1.5em;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        .card-section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Divider between sections */
+        .divider {
+            height: 2px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</section>

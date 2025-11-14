@@ -1,0 +1,104 @@
+<section id="college_section">
+    <h1>College</h1>
+    <div class="cards">
+        <!-- Overview Card -->
+        <div class="card college-card">
+            <img src="https://via.placeholder.com/300x200?text=College" alt="College Overview">
+            <h3>Overview</h3>
+            <p>
+                Advanced tertiary education with programs designed for higher learning, professional skills, and career development. Preparing graduates for Licensure Exams and professional excellence.
+            </p>
+        </div>
+
+        <!-- Courses Offered Card -->
+        <div class="card college-card courses-card">
+            <h3>Available Courses Offered</h3>
+            <p><strong>BSED:</strong> Bachelor of Secondary Education - Majors in English, Mathematics, Filipino, Religious Education</p>
+            <p><strong>BSBA:</strong> Bachelor of Science in Business Administration - Majors in Marketing Management, Human Resource Development Management</p>
+            <p><strong>BEED:</strong> Bachelor of Elementary Education - General Education</p>
+            <p><strong>BECED:</strong> Bachelor of Early Childhood Education</p>
+            <p><strong>BSP:</strong> Bachelor of Science in Psychology</p>
+            <p><strong>BSA:</strong> Bachelor of Science in Accountancy</p>
+            <p><strong>BA JOURN:</strong> Bachelor of Arts in Journalism</p>
+            <p><strong>BA COMM:</strong> Bachelor of Arts in Communication</p>
+            <p><strong>BSIT:</strong> Bachelor of Science in Information Technology</p>
+            <p><strong>BS ENTREP:</strong> Bachelor of Science in Entrepreneurship</p>
+        </div>
+    </div>
+
+    <script>
+        const collegeCards = document.querySelectorAll('#college_section .card.college-card');
+        collegeCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 6px 18px rgba(0,0,0,0.1)';
+            });
+        });
+    </script>
+
+    <style>
+        /* Section */
+        #college_section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #college_section h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        /* Cards container */
+        #college_section .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        #college_section .card.college-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; /* Default for all cards */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Courses card overrides */
+        #college_section .card.college-card.courses-card {
+            text-align: left; /* Align content left */
+            align-items: flex-start; /* Align elements to left inside flex */
+        }
+
+        #college_section .card.college-card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        #college_section .card.college-card h3 {
+            font-size: 1.4em;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        #college_section .card.college-card p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+    </style>
+</section>

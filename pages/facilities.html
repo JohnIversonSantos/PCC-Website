@@ -1,0 +1,112 @@
+<section id="facilities_section">
+    <h1>Facilities</h1>
+    <div class="cards">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Library" alt="Library">
+            <h3>Library</h3>
+            <p>A quiet and welcoming space with a variety of books and resources to support students’ learning and reading interests.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Aula+Minor" alt="Aula Minor">
+            <h3>Aula Minor</h3>
+            <p>An air-conditioned hall where all school events and programs are held. It provides a comfortable space for gatherings, performances, and important activities.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Crown+Jewel" alt="Crown Jewel">
+            <h3>Crown Jewel</h3>
+            <p>An open space area in the school where various events and activities also take place. It provides a versatile outdoor venue for gatherings and celebrations.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Covered+Court" alt="Covered Court">
+            <h3>Covered Court</h3>
+            <p>A sheltered athletic and recreational space that hosts sports, assemblies, and outdoor activities rain or shine. It features a sturdy roof, ample seating, and a smooth floor suitable for basketball, volleyball, and other school events.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Computer+Laboratory" alt="Computer Laboratory">
+            <h3>Computer Laboratory</h3>
+            <p>A well-equipped space with modern computers and reliable internet access, where students learn digital skills, work on projects, and conduct research in a comfortable, collaborative environment.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Veranda" alt="Veranda">
+            <h3>Veranda</h3>
+            <p>A covered, open-air space attached to the school building, providing a shaded area for students to relax, socialize, and enjoy fresh air between classes.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Air-conditioned+Canteen" alt="Air-conditioned Canteen">
+            <h3>Air-conditioned Canteen</h3>
+            <p>A comfortable and clean space where students can enjoy their meals and snacks in a cool environment. It provides a pleasant setting for students to relax and socialize during breaks.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Clinic" alt="Clinic">
+            <h3>Clinic</h3>
+            <p>A health facility that provides first aid, medical consultations, and emergency care to students and staff. It promotes health and wellness by offering routine check-ups, illness prevention, and health education, helping students stay healthy and ready to learn.</p>
+        </div>
+    </div>
+
+    <script>
+        const facilityCards = document.querySelectorAll('#facilities_section .card');
+        facilityCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 6px 18px rgba(0,0,0,0.1)';
+            });
+        });
+    </script>
+
+    <style>
+        #facilities_section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #facilities_section h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        #facilities_section .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #facilities_section .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #facilities_section .card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        #facilities_section .card h3 {
+            font-size: 1.4em;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        #facilities_section .card p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+    </style>
+</section>

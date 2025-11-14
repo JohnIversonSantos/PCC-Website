@@ -1,0 +1,93 @@
+<section id="grade_school_section">
+    <h1>Grade School</h1>
+    <div class="cards">
+        <!-- Overview Card -->
+        <div class="card gs-card">
+            <img src="https://storage.googleapis.com/school_sites/spud/images/academics/3C00B43CAB-1721781022.jpg" alt="Grade School Overview">
+            <h3>Overview</h3>
+            <p>
+                Comprehensive curriculum emphasizing literacy, numeracy, arts, and values formation for young learners. Our program builds strong academic foundations and character development from Grades 1 to 6.
+            </p>
+        </div>
+
+        <!-- Curriculum Highlights Card -->
+        <div class="card gs-card">
+            <h3>Curriculum Highlights</h3>
+            <p>• Focuses on holistic and integrated development of the person.</p>
+            <p>• Aims to produce Christ-like graduates equipped with knowledge, skills, and values to meet contemporary challenges.</p>
+            <p>• Supports the vision, mission, and educational objectives of the school.</p>
+            <p>• Emphasizes the formation of mind, body, and spirit.</p>
+            <p>• Offers programs and activities to strengthen Catholic values and character.</p>
+        </div>
+    </div>
+
+    <script>
+        const gsCards = document.querySelectorAll('#grade_school_section .card.gs-card');
+        gsCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 6px 18px rgba(0,0,0,0.1)';
+            });
+        });
+    </script>
+
+    <style>
+        /* Section */
+        #grade_school_section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #grade_school_section h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        /* Cards container */
+        #grade_school_section .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        #grade_school_section .card.gs-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #grade_school_section .card.gs-card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        #grade_school_section .card.gs-card h3 {
+            font-size: 1.4em;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        #grade_school_section .card.gs-card p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+    </style>
+</section>

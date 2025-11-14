@@ -1,0 +1,104 @@
+<section id="ece_section">
+    <h1>Grade School</h1>
+    <div class="cards">
+        
+        <!-- Overview Card -->
+        <div class="card gs-card">
+            <img src="https://storage.googleapis.com/school_sites/spud/images/academics/GS_Overview.jpg" alt="ECE Overview">
+            <h3>Overview</h3>
+            <p>
+                Our Grade School program builds strong academic foundations while fostering values, critical thinking, and social responsibility in students from Grades 1 to 6.
+            </p>
+        </div>
+
+        <!-- Subjects Card -->
+        <div class="card gs-card">
+            <h3>Subjects</h3>
+            <p>• Language Arts & Reading</p>
+            <p>• Mathematics</p>
+            <p>• Science & Technology</p>
+            <p>• Social Studies</p>
+            <p>• Christian Values & Formation</p>
+        </div>
+
+        <!-- Learning Approach Card -->
+        <div class="card gs-card">
+            <h3>Learning Approach</h3>
+            <p>• Student-centered learning: Encourages collaboration and active participation.</p>
+            <p>• Critical thinking & problem-solving skills</p>
+            <p>• Values formation integrated across subjects</p>
+            <p>• Enrichment activities: Arts, music, physical education, and STEM projects</p>
+        </div>
+
+    </div>
+
+    <script>
+        const gsCards = document.querySelectorAll('#ece_section .card.gs-card');
+        gsCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 6px 18px rgba(0,0,0,0.1)';
+            });
+        });
+    </script>
+
+    <style>
+        /* Section */
+        #ece_section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #ece_section h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        /* Cards container */
+        #ece_section .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        #ece_section .card.gs-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #ece_section .card.gs-card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        #ece_section .card.gs-card h3 {
+            font-size: 1.4em;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        #ece_section .card.gs-card p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+    </style>
+</section>
